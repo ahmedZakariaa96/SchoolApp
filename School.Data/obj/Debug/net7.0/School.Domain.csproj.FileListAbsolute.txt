@@ -1,0 +1,11 @@
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Data\bin\Debug\net7.0\School.Domain.deps.json
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Data\bin\Debug\net7.0\School.Domain.dll
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Data\bin\Debug\net7.0\School.Domain.pdb
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Data\obj\Debug\net7.0\School.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Data\obj\Debug\net7.0\School.Domain.AssemblyInfoInputs.cache
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Data\obj\Debug\net7.0\School.Domain.AssemblyInfo.cs
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Data\obj\Debug\net7.0\School.Domain.csproj.CoreCompileInputs.cache
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Data\obj\Debug\net7.0\School.Domain.dll
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Data\obj\Debug\net7.0\refint\School.Domain.dll
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Data\obj\Debug\net7.0\School.Domain.pdb
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Data\obj\Debug\net7.0\ref\School.Domain.dll

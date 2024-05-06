@@ -1,0 +1,42 @@
+ExceptionID : ea2e7fcb-2f5b-4979-aec7-fc61f4d1aa61
+Date : 4/27/2024 10:56:51 PM
+Request : UpdateStudentSchool.Application.Handlers.StudentFeature.Commends.UpdateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: MaximumLengthValidator , Name: Name should have 10 chracters
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+MaximumLengthValidator , Name: Name should have 10 chracters
+
+######################################################################################################################################
+
+
+ExceptionID : b74e09fc-a478-4c5c-95d9-05a763c4881a
+Date : 4/27/2024 10:57:25 PM
+Request : UpdateStudentSchool.Application.Handlers.StudentFeature.Commends.UpdateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: The instance of entity type 'Student' cannot be tracked because another instance with the same key value for {'StudId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+Source: Microsoft.EntityFrameworkCore
+
+
+######################################################################################################################################
+
+
+ExceptionID : 1436f5e2-9cb4-4b9d-85f4-f041e54e7de2
+Date : 4/27/2024 11:01:13 PM
+Request : UpdateStudentSchool.Application.Handlers.StudentFeature.Commends.UpdateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: MaximumLengthValidator , Name: Name should have 10 chracters
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+MaximumLengthValidator , Name: Name should have 10 chracters
+
+######################################################################################################################################
+
+

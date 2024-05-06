@@ -1,0 +1,462 @@
+ExceptionID : 93cab430-569d-4cf9-a841-5666c52ef7a2
+
+Date : 4/23/2024 2:31:06 PM
+
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+
+Exception
+Exception Message: An exception was thrown while attempting to evaluate a LINQ query parameter expression. See the inner exception for more information. To show additional information call 'DbContextOptionsBuilder.EnableSensitiveDataLogging'.
+----------------------------------------------------------------------------
+Source: 
+Microsoft.EntityFrameworkCore
+----------------------------------------------------------------------------
+Stack Trace: 
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, String& parameterName)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Evaluate(Expression expression, Boolean generateParameter)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitBinary(BinaryExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitLambda[T](Expression`1 node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitUnary(UnaryExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression, Boolean clearEvaluatedValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExtractParameters(Expression query, IParameterValues parameterValues, IDiagnosticsLogger`1 logger, Boolean parameterize, Boolean generateContextAccessors)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at School.Application.Handlers.StudentFeature.Commends.CreateStudentCommendHandler.Handle(CreateStudent request, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Handlers\StudentFeature\Commends\CreateStudentCommendHandler.cs:line 44
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 22
+----------------------------------------------------------------------------
+
+
+Inner Exception : 
+Exception
+Exception Message: Object reference not set to an instance of an object.
+----------------------------------------------------------------------------
+Source: 
+System.Private.CoreLib
+----------------------------------------------------------------------------
+Stack Trace: 
+   at System.Object.GetType()
+   at System.Linq.Expressions.Interpreter.FuncCallInstruction`2.Run(InterpretedFrame frame)
+   at System.Linq.Expressions.Interpreter.Interpreter.Run(InterpretedFrame frame)
+   at System.Linq.Expressions.Interpreter.LightLambda.Run(Object[] arguments)
+   at System.Dynamic.Utils.DelegateHelpers.FuncThunk[TReturn](Func`2 handler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, String& parameterName)
+----------------------------------------------------------------------------
+
+
+
+######################################################################################################################################
+ExceptionID : b2554c58-84db-43ab-a7eb-12f279d2f062
+
+Date : 4/23/2024 2:32:12 PM
+
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+
+Exception
+Exception Message: An exception was thrown while attempting to evaluate a LINQ query parameter expression. See the inner exception for more information. To show additional information call 'DbContextOptionsBuilder.EnableSensitiveDataLogging'.
+----------------------------------------------------------------------------
+Source: 
+Microsoft.EntityFrameworkCore
+----------------------------------------------------------------------------
+Stack Trace: 
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, String& parameterName)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Evaluate(Expression expression, Boolean generateParameter)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitBinary(BinaryExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitLambda[T](Expression`1 node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitUnary(UnaryExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression, Boolean clearEvaluatedValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExtractParameters(Expression query, IParameterValues parameterValues, IDiagnosticsLogger`1 logger, Boolean parameterize, Boolean generateContextAccessors)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at School.Application.Handlers.StudentFeature.Commends.CreateStudentCommendHandler.Handle(CreateStudent request, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Handlers\StudentFeature\Commends\CreateStudentCommendHandler.cs:line 44
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 22
+----------------------------------------------------------------------------
+
+
+Inner Exception : 
+Exception
+Exception Message: Object reference not set to an instance of an object.
+----------------------------------------------------------------------------
+Source: 
+System.Private.CoreLib
+----------------------------------------------------------------------------
+Stack Trace: 
+   at System.Object.GetType()
+   at System.Linq.Expressions.Interpreter.FuncCallInstruction`2.Run(InterpretedFrame frame)
+   at System.Linq.Expressions.Interpreter.Interpreter.Run(InterpretedFrame frame)
+   at System.Linq.Expressions.Interpreter.LightLambda.Run(Object[] arguments)
+   at System.Dynamic.Utils.DelegateHelpers.FuncThunk[TReturn](Func`2 handler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, String& parameterName)
+----------------------------------------------------------------------------
+
+
+
+######################################################################################################################################
+ExceptionID : 97b95aba-b135-4951-859f-10db9ae0c675
+
+Date : 4/23/2024 5:21:50 PM
+
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+
+Exception
+Exception Message: NotEmptyValidator , Name: Name is NotEmpty
+----------------------------------------------------------------------------
+Source: 
+School.Application
+----------------------------------------------------------------------------
+Stack Trace: 
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 26
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 22
+----------------------------------------------------------------------------
+
+
+
+######################################################################################################################################
+ExceptionID : 3166b6de-dbbb-4f0a-857d-7d6a2583a9ba
+
+Date : 4/23/2024 5:24:24 PM
+
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+
+Exception
+Exception Message: NotEmptyValidator , Name: Name is NotEmpty
+----------------------------------------------------------------------------
+Source: 
+School.Application
+----------------------------------------------------------------------------
+Stack Trace: 
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 26
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 22
+----------------------------------------------------------------------------
+
+
+
+######################################################################################################################################
+ExceptionID : 5fed9aba-80e3-4a80-ad3e-6fdb4030415d
+
+Date : 4/23/2024 5:45:07 PM
+
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+
+Exception
+Exception Message: NotEmptyValidator , Name: Name is NotEmpty
+----------------------------------------------------------------------------
+Source: 
+School.Application
+----------------------------------------------------------------------------
+Stack Trace: 
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 26
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 22
+----------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------
+errors
+NotEmptyValidator , Name: Name is NotEmpty
+
+
+NotNullValidator , Name: Name is NotNull
+
+
+
+######################################################################################################################################
+ExceptionID : ceaaf3f2-94e4-4ee0-b113-cff878a2391c
+
+Date : 4/23/2024 5:56:35 PM
+
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+
+Exception
+Exception Message: The method or operation is not implemented.
+----------------------------------------------------------------------------
+Source: 
+School.Application
+----------------------------------------------------------------------------
+Stack Trace: 
+   at School.Application.Handlers.StudentFeature.Commends.CreateStudentCommendHandler.Handle(CreateStudent request, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Handlers\StudentFeature\Commends\CreateStudentCommendHandler.cs:line 42
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 30
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 22
+----------------------------------------------------------------------------
+
+
+
+ExceptionID : 9662f990-59de-46f5-8b33-abea6cf3381d
+
+Date : 4/23/2024 5:58:43 PM
+
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+
+Exception
+Exception Message: The method or operation is not implemented.
+----------------------------------------------------------------------------
+Source: 
+School.Application
+----------------------------------------------------------------------------
+Stack Trace: 
+   at School.Application.Handlers.StudentFeature.Commends.CreateStudentCommendHandler.Handle(CreateStudent request, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Handlers\StudentFeature\Commends\CreateStudentCommendHandler.cs:line 42
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 30
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 22
+----------------------------------------------------------------------------
+
+
+
+
+######################################################################################################################################
+ExceptionID : e3596051-e965-4bd8-9a61-9aaba0c25189
+
+Date : 4/23/2024 6:02:33 PM
+
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+
+----------------------------------------------------------------------------
+Exception
+Exception Message: NotEmptyValidator , Name: Name is NotEmpty
+Source: 
+School.Application
+Stack Trace: 
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 26
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 22
+
+----------------------------------------------------------------------------
+errors
+NotEmptyValidator , Name: Name is NotEmpty
+NotNullValidator , Name: Name is NotNull
+
+
+
+######################################################################################################################################
+ExceptionID : f0528f00-9467-483e-80ab-5b5365877722
+Date : 4/23/2024 6:04:14 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: NotEmptyValidator , Name: Name is NotEmpty
+Source: 
+School.Application
+Stack Trace: 
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 26
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 22
+
+----------------------------------------------------------------------------
+errors
+NotEmptyValidator , Name: Name is NotEmpty
+NotNullValidator , Name: Name is NotNull
+
+
+
+######################################################################################################################################
+ExceptionID : 0f848ffa-2588-4070-a62b-450724470d9a
+Date : 4/23/2024 6:05:53 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: NotEmptyValidator , Name: Name is NotEmpty
+Source: 
+School.Application
+Stack Trace: 
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 26
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 22
+
+----------------------------------------------------------------------------
+errors
+NotEmptyValidator , Name: Name is NotEmpty
+NotNullValidator , Name: Name is NotNull
+
+######################################################################################################################################
+
+
+ExceptionID : 989fddd4-7013-405b-9ca9-8ba894734778
+Date : 4/23/2024 6:35:45 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: NotEmptyValidator , Name: Name is NotEmpty
+Source: 
+School.Application
+Stack Trace: 
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 26
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 24
+
+----------------------------------------------------------------------------
+errors
+NotEmptyValidator , Name: Name is NotEmpty
+NotNullValidator , Name: Name is NotNull
+
+######################################################################################################################################
+
+
+ExceptionID : 0095118f-e498-4aaa-871c-69406f979961
+Date : 4/23/2024 6:37:43 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: NotEmptyValidator , Name: Name is NotEmpty
+Source: 
+School.Application
+Stack Trace: 
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 26
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 23
+
+----------------------------------------------------------------------------
+errors
+NotEmptyValidator , Name: Name is NotEmpty
+NotNullValidator , Name: Name is NotNull
+
+######################################################################################################################################
+
+
+ExceptionID : e33b7d54-545f-442e-b0a2-6069c8b63991
+Date : 4/23/2024 8:00:34 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: NotEmptyValidator , Name: Name is NotEmpty
+Source: 
+School.Application
+Stack Trace: 
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 26
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 23
+
+----------------------------------------------------------------------------
+errors
+NotEmptyValidator , Name: Name is NotEmpty
+NotNullValidator , Name: Name is NotNull
+
+######################################################################################################################################
+
+
+ExceptionID : c7cbc897-f518-4046-aefe-c1b2e9224f38
+Date : 4/23/2024 8:06:18 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: NotEmptyValidator , Name: Name is NotEmpty
+Source: 
+School.Application
+Stack Trace: 
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 26
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 23
+
+----------------------------------------------------------------------------
+errors
+NotEmptyValidator , Name: Name is NotEmpty
+NotNullValidator , Name: Name is NotNull
+
+######################################################################################################################################
+
+
+ExceptionID : 61397bf2-20ef-4d43-a268-56ab1014be10
+Date : 4/23/2024 8:09:24 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: NotEmptyValidator , Name: Name is NotEmpty
+Source: 
+School.Application
+Stack Trace: 
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 26
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 23
+
+----------------------------------------------------------------------------
+errors
+NotEmptyValidator , Name: Name is NotEmpty
+NotNullValidator , Name: Name is NotNull
+
+######################################################################################################################################
+
+
+ExceptionID : 26450f86-8fa9-4386-883a-b1fe79e3aed3
+Date : 4/23/2024 8:14:09 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: NotEmptyValidator , Name: Name is NotEmpty
+Source: 
+School.Application
+Stack Trace: 
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 26
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 23
+
+----------------------------------------------------------------------------
+errors
+NotEmptyValidator , Name: Name is NotEmpty
+NotNullValidator , Name: Name is NotNull
+
+######################################################################################################################################
+
+
+ExceptionID : baea1e87-6609-449f-aef7-954928aefcb4
+Date : 4/23/2024 8:18:36 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: NotEmptyValidator , Name: Name is NotEmpty
+Source: 
+School.Application
+Stack Trace: 
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 26
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 23
+
+----------------------------------------------------------------------------
+errors
+NotEmptyValidator , Name: Name is NotEmpty
+NotNullValidator , Name: Name is NotNull
+
+######################################################################################################################################
+
+
+ExceptionID : ddb0f3a1-4cb1-4a6f-848e-b8d31e28d355
+Date : 4/23/2024 8:26:24 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: NotEmptyValidator , Name: Name is NotEmpty
+Source: 
+School.Application
+Stack Trace: 
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 26
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 23
+
+----------------------------------------------------------------------------
+errors
+NotEmptyValidator , Name: Name is NotEmpty
+NotNullValidator , Name: Name is NotNull
+
+######################################################################################################################################
+
+

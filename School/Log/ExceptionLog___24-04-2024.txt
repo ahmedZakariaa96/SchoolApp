@@ -1,0 +1,203 @@
+ExceptionID : 1cc8c557-a5e2-4733-8d4d-e2dec0716fc9
+Date : 4/24/2024 2:47:03 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: NotEmptyValidator , Name: Name is NotEmpty
+Source: 
+School.Application
+Stack Trace: 
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 26
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 23
+
+----------------------------------------------------------------------------
+errors
+NotEmptyValidator , Name: Name is NotEmpty
+NotNullValidator , Name: Name is NotNull
+
+######################################################################################################################################
+
+
+ExceptionID : b355eaff-7b3f-4bf2-a993-e4e853bb5881
+Date : 4/24/2024 2:51:32 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: NotEmptyValidator , Name: Name is NotEmpty
+Source: 
+School.Application
+Stack Trace: 
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 26
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 23
+
+----------------------------------------------------------------------------
+errors
+NotEmptyValidator , Name: Name is NotEmpty
+NotNullValidator , Name: Name is NotNull
+
+######################################################################################################################################
+
+
+ExceptionID : 51bcfd4b-c47d-4494-8cb4-5d64a7897acf
+Date : 4/24/2024 3:03:29 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: An error occurred while saving the entity changes. See the inner exception for details.
+Source: 
+Microsoft.EntityFrameworkCore.Relational
+Stack Trace: 
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at School.Infrestructure.Persistence.Repositories.Base.UnitOfWork.UnitOfWork.CompleteAsync(CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Infrestructure\Persistence\Repositories\Base\UnitOfWork\UnitOfWork.cs:line 21
+   at School.Application.Handlers.StudentFeature.Commends.CreateStudentCommendHandler.Handle(CreateStudent request, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Handlers\StudentFeature\Commends\CreateStudentCommendHandler.cs:line 54
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 30
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 23
+Inner Exception : 
+----------------------------------------------------------------------------
+Exception
+Exception Message: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Students_departments_DepId". The conflict occurred in database "SchoolDB", table "dbo.departments", column 'DepId'.
+Source: 
+Core Microsoft SqlClient Data Provider
+Stack Trace: 
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+
+
+######################################################################################################################################
+
+
+ExceptionID : f9c497b7-3b03-4b24-a70e-73a0daf02dd4
+Date : 4/24/2024 3:10:21 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: MaximumLengthValidator , Name: Name should have 10 chracters
+Source: 
+School.Application
+Stack Trace: 
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 26
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 23
+
+----------------------------------------------------------------------------
+errors
+MaximumLengthValidator , Name: Name should have 10 chracters
+
+######################################################################################################################################
+
+
+ExceptionID : e6dfb7b5-4eee-4d3a-936a-ee0c05d09b0c
+Date : 4/24/2024 3:12:07 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: An error occurred while saving the entity changes. See the inner exception for details.
+Source: 
+Microsoft.EntityFrameworkCore.Relational
+Stack Trace: 
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at School.Infrestructure.Persistence.Repositories.Base.UnitOfWork.UnitOfWork.CompleteAsync(CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Infrestructure\Persistence\Repositories\Base\UnitOfWork\UnitOfWork.cs:line 21
+   at School.Application.Handlers.StudentFeature.Commends.CreateStudentCommendHandler.Handle(CreateStudent request, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Handlers\StudentFeature\Commends\CreateStudentCommendHandler.cs:line 54
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\ValidationBehavior.cs:line 30
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\Base\Behaviours\UnhandledExceptionBehaviour.cs:line 23
+Inner Exception : 
+----------------------------------------------------------------------------
+Exception
+Exception Message: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Students_departments_DepId". The conflict occurred in database "SchoolDB", table "dbo.departments", column 'DepId'.
+Source: 
+Core Microsoft SqlClient Data Provider
+Stack Trace: 
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+
+
+######################################################################################################################################
+
+
+ExceptionID : 69767ed2-2912-470a-bedf-775741eaea92
+Date : 4/24/2024 3:15:05 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: MaximumLengthValidator , Name: Name should have 10 chracters
+Source: 
+School.Application
+
+----------------------------------------------------------------------------
+errors
+MaximumLengthValidator , Name: Name should have 10 chracters
+
+######################################################################################################################################
+
+
+ExceptionID : 30b7aef7-3434-4430-a86f-72108a3669c7
+Date : 4/24/2024 3:17:42 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: An error occurred while saving the entity changes. See the inner exception for details.
+Source: Microsoft.EntityFrameworkCore.Relational
+Inner Exception : 
+----------------------------------------------------------------------------
+Exception
+Exception Message: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Students_departments_DepId". The conflict occurred in database "SchoolDB", table "dbo.departments", column 'DepId'.
+Source: Core Microsoft SqlClient Data Provider
+
+
+######################################################################################################################################
+
+
+ExceptionID : 89eadafc-ee00-46e7-ac9f-70b519e880fa
+Date : 4/24/2024 5:10:17 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , Name: Name is exist 
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , Name: Name is exist 
+
+######################################################################################################################################
+
+

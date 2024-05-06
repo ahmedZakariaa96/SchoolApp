@@ -1,0 +1,12 @@
+ExceptionID : 66e87f20-4085-42ff-8825-b7e9b2995be2
+Date : 4/30/2024 3:23:15 PM
+Request : GetAllStudentGetAllStudent { pageNumber = 0, pageSize = 2 }
+----------------------------------------------------------------------------
+Exception
+Exception Message: The offset specified in a OFFSET clause may not be negative.
+Source: Core Microsoft SqlClient Data Provider
+
+
+######################################################################################################################################
+
+

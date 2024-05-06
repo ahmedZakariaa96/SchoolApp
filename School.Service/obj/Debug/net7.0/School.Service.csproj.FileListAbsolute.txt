@@ -1,0 +1,17 @@
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Service\bin\Debug\net7.0\School.Service.deps.json
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Service\bin\Debug\net7.0\School.Service.dll
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Service\bin\Debug\net7.0\School.Service.pdb
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Service\bin\Debug\net7.0\School.Data.dll
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Service\bin\Debug\net7.0\School.Infrestructure.dll
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Service\bin\Debug\net7.0\School.Data.pdb
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Service\bin\Debug\net7.0\School.Infrestructure.pdb
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Service\obj\Debug\net7.0\School.Service.csproj.AssemblyReference.cache
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Service\obj\Debug\net7.0\School.Service.GeneratedMSBuildEditorConfig.editorconfig
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Service\obj\Debug\net7.0\School.Service.AssemblyInfoInputs.cache
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Service\obj\Debug\net7.0\School.Service.AssemblyInfo.cs
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Service\obj\Debug\net7.0\School.Service.csproj.CoreCompileInputs.cache
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Service\obj\Debug\net7.0\School.Service.csproj.CopyComplete
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Service\obj\Debug\net7.0\School.Service.dll
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Service\obj\Debug\net7.0\refint\School.Service.dll
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Service\obj\Debug\net7.0\School.Service.pdb
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Service\obj\Debug\net7.0\ref\School.Service.dll
