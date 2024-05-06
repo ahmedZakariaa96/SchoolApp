@@ -4,6 +4,7 @@ namespace School.Application.Base.Shared
 {
     public static class ExtensionsMethods
     {
+
         public static IQueryable<StudentDTO> OrderBy(this IQueryable<StudentDTO> soure, OrderType? orderType)
         {
             switch (orderType)
