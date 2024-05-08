@@ -23,7 +23,7 @@ namespace School.Application.Base.Shared
             StatusResult = statusResult;
         }
 
-        public static Result<T> Success(T Data)
+        public static Result<T> Success(T Data, string Message = "Falid")
         {
             return new Result<T>()
             {
@@ -31,7 +31,7 @@ namespace School.Application.Base.Shared
                 StatusResult = StatusResult.Success,
                 StatusCode = (int)StatusCodes.Status200OK,
                 Data = Data,
-                Message = "Success"
+                Message = Message
 
             };
         }
@@ -43,7 +43,7 @@ namespace School.Application.Base.Shared
                 StatusResult = StatusResult.Falid,
                 StatusCode = (int)StatusCodes.Status417ExpectationFailed,
                 Data = Data,
-                Message = "Falid"
+                Message = Message
 
             };
         }

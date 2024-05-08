@@ -57,7 +57,7 @@ namespace School.Application.Handlers.StudentFeature.Queries
             if (allData != null)
             {
                 allData = allData.OrderBy(request.OrderBy);
-                paginatedResult = await allData.OrderBy(x => x.Name).ToPaginatedListAsync(request.PageNumber, request.PageSize);
+                paginatedResult = await allData.ToPaginatedListAsync(request.PageNumber, request.PageSize);
             }
             if (request.OrderBy != null)
             {

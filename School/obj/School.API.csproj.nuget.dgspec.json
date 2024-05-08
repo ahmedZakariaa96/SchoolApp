@@ -71,6 +71,10 @@
               "target": "Package",
               "version": "[5.0.17, )"
             },
+            "Microsoft.Extensions.Localization.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.18, )"
+            },
             "System.Text.Json": {
               "target": "Package",
               "version": "[7.0.4, )"

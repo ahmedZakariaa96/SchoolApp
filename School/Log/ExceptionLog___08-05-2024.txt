@@ -1,0 +1,150 @@
+ExceptionID : ef60b858-cb99-454b-804b-acebdf30d645
+Date : 5/8/2024 6:59:23 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , Name: Name is exist 
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , Name: Name is exist 
+
+######################################################################################################################################
+
+
+ExceptionID : 53869364-0c8e-40b4-ba5d-cbd3df912112
+Date : 5/8/2024 7:29:17 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , Name: Name is exist 
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , Name: Name is exist 
+
+######################################################################################################################################
+
+
+ExceptionID : 7a38bd7a-a88f-4638-af9b-c80e12f583ab
+Date : 5/8/2024 7:32:01 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , Name: Name is exist 
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , Name: Name is exist 
+
+######################################################################################################################################
+
+
+ExceptionID : 06f4b7f8-5f73-4ae0-b9d2-b98bf59b0370
+Date : 5/8/2024 7:45:10 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , Name: Name is exist 
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , Name: Name is exist 
+
+######################################################################################################################################
+
+
+ExceptionID : d268585d-3431-49b8-8fb4-9a75b9b221d2
+Date : 5/8/2024 7:51:44 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , Name: Name is exist 
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , Name: Name is exist 
+
+######################################################################################################################################
+
+
+ExceptionID : 1e57ed86-1bdf-40d8-82fd-ba95f6c994bc
+Date : 5/8/2024 8:00:46 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , Name: Name is exist 
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , Name: Name is exist 
+
+######################################################################################################################################
+
+
+ExceptionID : 6b3d5316-3da5-4fd2-a44c-8bcf6d763217
+Date : 8‏‏/5‏‏/2024 8:11:10 م
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , Name: Name is exist 
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , Name: Name is exist 
+
+######################################################################################################################################
+
+
+ExceptionID : ce560009-2807-48ca-9da6-1f2dd342d1dc
+Date : 8‏‏/5‏‏/2024 8:13:32 م
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , Name: Name is exist 
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , Name: Name is exist 
+
+######################################################################################################################################
+
+
+ExceptionID : fa64b98b-e203-4dd3-b5c7-18faddd21b31
+Date : 5/8/2024 8:15:04 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , Name: Name is exist 
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , Name: Name is exist 
+
+######################################################################################################################################
+
+
+ExceptionID : cdc2581e-3adb-4910-8e20-2d0b141989a6
+Date : 8‏‏/5‏‏/2024 8:15:29 م
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , Name: Name is exist 
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , Name: Name is exist 
+
+######################################################################################################################################
+
+

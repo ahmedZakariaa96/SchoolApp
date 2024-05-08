@@ -15,3 +15,11 @@ E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\obj\Deb
 E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\obj\Debug\net7.0\refint\School.Application.dll
 E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\obj\Debug\net7.0\School.Application.pdb
 E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\obj\Debug\net7.0\ref\School.Application.dll
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\bin\Debug\net7.0\AR\School.Application.resources.dll
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\obj\Debug\net7.0\School.Application.csproj.GenerateResource.cache
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\obj\Debug\net7.0\School.Application.sourcelink.json
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\obj\Debug\net7.0\AR\School.Application.resources.dll
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\obj\Debug\net7.0\School.Application.Base.Shared.Resources.ResourcesLocalization.AR.resources
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\bin\Debug\net7.0\en\School.Application.resources.dll
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\obj\Debug\net7.0\School.Application.Base.Shared.Resources.ResourcesLocalization.en.resources
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Core\obj\Debug\net7.0\en\School.Application.resources.dll

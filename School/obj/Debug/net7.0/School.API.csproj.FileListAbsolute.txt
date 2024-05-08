@@ -86,3 +86,7 @@ E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School\obj\Debug\ne
 E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School\obj\Debug\net7.0\ref\School.API.dll
 E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School\bin\Debug\net7.0\FluentValidation.dll
 E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School\bin\Debug\net7.0\Microsoft.Extensions.Localization.Abstractions.dll
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School\bin\Debug\net7.0\AR\School.Application.resources.dll
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School\obj\Debug\net7.0\School.API.sourcelink.json
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School\bin\Debug\net7.0\EN\School.Application.resources.dll

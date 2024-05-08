@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 using School.Application.Base.Shared;
+using School.Application.Base.Shared.Resources;
 using School.Domain.Entities;
 using School.Infrestructure.Persistence.Repositories.Base.Mappings;
 using School.Infrestructure.Persistence.Repositories.Base.UnitOfWork;
@@ -32,13 +34,18 @@ namespace School.Application.Handlers.StudentFeature.Commends
 
         private readonly IMapper mapper;
 
-        public CreateStudentCommendHandler(IUnitOfWork unitOfWork, IMapper mapper)
+        public CreateStudentCommendHandler(IUnitOfWork unitOfWork, IMapper mapper, IStringLocalizer<ResourcesLocalization> _localizer)
         {
             this.unitOfWork = unitOfWork;
             this.mapper = mapper;
+            Localizer = _localizer;
         }
+
+        public IStringLocalizer<ResourcesLocalization> Localizer { get; }
+
         public async Task<Result<string>> Handle(CreateStudent request, CancellationToken cancellationToken)
         {
+
             var result = Result<string>.Info(null, StatusResult.Exist);
 
             var cureentStudent = await this.unitOfWork.Repository<Student>()
@@ -49,9 +56,12 @@ namespace School.Application.Handlers.StudentFeature.Commends
             }
             else
             {
+
                 var newStudent = mapper.Map<Student>(request);
                 this.unitOfWork.Repository<Student>().Create(newStudent);
-                result = await unitOfWork.CompleteAsync(cancellationToken) >= (int)StatusResult.Success ? Result<string>.Success(newStudent.StudId.ToString()) : Result<string>.Falid(null);
+                result = await unitOfWork.CompleteAsync(cancellationToken) >= (int)StatusResult.Success ?
+                    Result<string>.Success(newStudent.StudId.ToString(), Localizer[ResourcesLocalizationKeys.Save])
+                    : Result<string>.Falid(null, Localizer[ResourcesLocalizationKeys.Falid]);
 
             }
             return result;

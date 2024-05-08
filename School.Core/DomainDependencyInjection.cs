@@ -17,6 +17,7 @@ namespace School.Application
             AddAutoMapper(services);
             AddHandleException(services);
             AddValidators(services);
+
             return services;
 
 
@@ -46,6 +47,7 @@ namespace School.Application
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehaviour<,>));
 
         }
+
 
     }
 }
