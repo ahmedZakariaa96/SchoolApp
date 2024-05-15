@@ -1,4 +1,6 @@
 ﻿using FluentValidation;
+using Microsoft.Extensions.Localization;
+using School.Application.Base.Shared.Resources;
 using School.Application.Handlers.StudentFeature.Commends;
 using School.Application.Handlers.StudentFeature.Services;
 
@@ -8,19 +10,23 @@ namespace School.Application.Handlers.StudentFeature.Validators
     {
         private readonly IStudentService studentService;
 
-        public CreateStudentValidator(IStudentService studentService)
+        public IStringLocalizer<ResourcesLocalization> Localizer { get; }
+
+        public CreateStudentValidator(IStudentService studentService, IStringLocalizer<ResourcesLocalization> _localizer)
         {
+            this.studentService = studentService;
+            Localizer = _localizer;
             applyValidationRule();
             applyCustomeValidation();
-            this.studentService = studentService;
+
         }
         public async void applyValidationRule()
         {
+            var x = Localizer[ResourcesLocalizationKeys.NotEmpty];
 
             RuleFor(x => x.Name)
-                .NotEmpty().WithMessage("{PropertyName} is NotEmpty")
-                .NotNull().WithMessage("{PropertyName} is NotNull")
-                .MaximumLength(10).WithMessage("{PropertyName} should have 10 chracters");
+                .NotEmpty().WithMessage(Localizer[ResourcesLocalizationKeys.NotEmpty])
+                .MaximumLength(10).WithMessage(Localizer[ResourcesLocalizationKeys.ChractersLenght]);
 
 
 
@@ -29,7 +35,7 @@ namespace School.Application.Handlers.StudentFeature.Validators
         public void applyCustomeValidation()
         {
             RuleFor(x => x.Name).MustAsync(async (Key, CancellationToken) => !await this.studentService.IsNameExist(Key))
-                .WithMessage("Name is exist ");
+                .WithMessage(Localizer[ResourcesLocalizationKeys.Exist]);
         }
 
     }

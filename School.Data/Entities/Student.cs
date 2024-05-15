@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using School.Domain.Shared;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace School.Domain.Entities
 {
-    public class Student
+    public class Student : GenericLocalizable
     {
         [Key]
         public int StudId { get; set; }
         [StringLength(500)]
-        public required string Name { get; set; }
+        public required string NameEn { get; set; }
+        public required string NameAr { get; set; }
+
         [StringLength(500)]
         public required string Phone { get; set; }
         [StringLength(500)]

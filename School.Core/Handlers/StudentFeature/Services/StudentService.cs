@@ -14,12 +14,12 @@ namespace School.Application.Handlers.StudentFeature.Services
         }
         public async Task<bool> IsNameExist(string stdName)
         {
-            var haveRecord = await this.unitOfWork.Repository<Student>().FindByCondition(x => x.Name == stdName).AnyAsync();
+            var haveRecord = await this.unitOfWork.Repository<Student>().FindByCondition(x => x.NameEn == stdName).AnyAsync();
             return haveRecord;
         }
         public async Task<bool> IsNameExist(string stdName, int StudId)
         {
-            var haveRecord = await this.unitOfWork.Repository<Student>().FindByCondition(x => x.Name == stdName && x.StudId != StudId).AnyAsync();
+            var haveRecord = await this.unitOfWork.Repository<Student>().FindByCondition(x => x.NameEn == stdName && x.StudId != StudId).AnyAsync();
             return haveRecord;
         }
     }

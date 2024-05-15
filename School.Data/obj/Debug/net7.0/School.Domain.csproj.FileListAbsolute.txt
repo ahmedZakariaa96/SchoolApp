@@ -9,3 +9,4 @@ E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Data\obj\Deb
 E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Data\obj\Debug\net7.0\refint\School.Domain.dll
 E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Data\obj\Debug\net7.0\School.Domain.pdb
 E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Data\obj\Debug\net7.0\ref\School.Domain.dll
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Data\obj\Debug\net7.0\School.Domain.sourcelink.json

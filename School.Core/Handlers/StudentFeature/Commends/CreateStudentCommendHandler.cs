@@ -46,13 +46,13 @@ namespace School.Application.Handlers.StudentFeature.Commends
         public async Task<Result<string>> Handle(CreateStudent request, CancellationToken cancellationToken)
         {
 
-            var result = Result<string>.Info(null, StatusResult.Exist);
+            var result = Result<string>.Info(null, StatusResult.Exist, Localizer[ResourcesLocalizationKeys.Exist]);
 
             var cureentStudent = await this.unitOfWork.Repository<Student>()
-                .FindByCondition(x => x.Name.ToLower() == request.Name.ToLower()).FirstOrDefaultAsync();
+                .FindByCondition(x => x.NameEn.ToLower() == request.Name.ToLower()).FirstOrDefaultAsync();
             if (cureentStudent != null)
             {
-                return Result<string>.Info(cureentStudent.StudId.ToString(), StatusResult.Exist);
+                return Result<string>.Info(cureentStudent.StudId.ToString(), StatusResult.Exist, Localizer[ResourcesLocalizationKeys.Exist]);
             }
             else
             {

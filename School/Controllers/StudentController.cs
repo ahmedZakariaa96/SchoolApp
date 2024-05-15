@@ -16,7 +16,7 @@ namespace School.API.Controllers
 
         [HttpPost]
         [Route("GetAll")]
-        public async Task<ActionResult<Result<PaginatedResult<StudentDTO>>>> GetAll([FromForm] PaginatedRquest paginatedRquest)
+        public async Task<ActionResult<Result<PaginatedResult<StudentDTO>>>> GetAll(PaginatedRquest paginatedRquest)
         {
             return Single(await QueryAsync(new GetAllStudent(paginatedRquest.PageNumber, paginatedRquest.PageSize, paginatedRquest.OrderBy)));
         }

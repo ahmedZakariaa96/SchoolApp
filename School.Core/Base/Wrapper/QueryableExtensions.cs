@@ -22,6 +22,24 @@ namespace School.Application.Base.Wrapper
             return new PaginatedResult<T>(items, pageNumber, pageSize, totalCount);
         }
 
+        public static async Task<PaginatedResult<T>> ToPaginatedListAsync<T>(this IEnumerable<T> source, int pageNumber, int pageSize)
+        where T : class
+        {
+            if (source == null)
+            {
+                return new PaginatedResult<T>(new List<T>(), pageNumber, pageSize, 0);
+            }
+
+            pageNumber = pageNumber <= 0 ? 1 : pageNumber;
+            pageSize = pageSize <= 0 ? 10 : pageSize;
+
+            int totalCount = source.Count();
+            if (totalCount == 0) return new PaginatedResult<T>(new List<T>(), pageNumber, pageSize, totalCount);
+
+            var items = source.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
+            return new PaginatedResult<T>(items, pageNumber, pageSize, totalCount);
+        }
+
 
     }
 

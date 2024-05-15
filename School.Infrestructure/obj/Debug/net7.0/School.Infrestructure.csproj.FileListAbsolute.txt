@@ -15,3 +15,4 @@ E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Infrestructu
 E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Infrestructure\obj\Debug\net7.0\School.Infrestructure.pdb
 E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Infrestructure\obj\Debug\net7.0\School.Infrestructure.genruntimeconfig.cache
 E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Infrestructure\obj\Debug\net7.0\ref\School.Infrestructure.dll
+E:\Self Study\2024\Back-End\Backend\CleanArchitecture\School\School.Infrestructure\obj\Debug\net7.0\School.Infrestructure.sourcelink.json

@@ -35,6 +35,35 @@ namespace School.Application.Handlers.StudentFeature.Queries
         }
         public async Task<Result<PaginatedResult<StudentDTO>>> Handle(GetAllStudent request, CancellationToken cancellationToken)
         {
+
+            //var deps = this.unitOfWork.Repository<Department>().FindAll().Include(x => x.Students).ToList();
+
+            var allData = this.unitOfWork.Repository<Student>().FindAll().ProjectTo<StudentDTO>(mapper.ConfigurationProvider);
+            var paginatedResult = new PaginatedResult<StudentDTO>();
+            if (allData != null)
+            {
+                if (request.OrderBy == OrderType.Name)
+                {
+                    var resultdata = allData.AsEnumerable();
+                    resultdata = resultdata.OrderBy(request.OrderBy);
+                    paginatedResult = await resultdata.ToPaginatedListAsync(request.PageNumber, request.PageSize);
+                }
+                else
+                {
+
+                    allData = allData.OrderBy(request.OrderBy);
+                    paginatedResult = await allData.ToPaginatedListAsync(request.PageNumber, request.PageSize);
+                }
+
+            }
+
+
+
+            return Result<PaginatedResult<StudentDTO>>.Success(paginatedResult);
+
+
+
+
             //this.unitOfWork.Repository<Student>().BeginTransaction();
             //this.unitOfWork.Repository<Student>().Commit();
             //this.unitOfWork.Repository<Student>().RollBack();
@@ -51,21 +80,6 @@ namespace School.Application.Handlers.StudentFeature.Queries
 
             //var res3 = await this.unitOfWork.Repository<Student>()
             //.FindByConditionAsTracking(x => x.StudId == 1 || x.StudId == 2 || x.StudId == 3).ToListAsync();
-
-            var allData = this.unitOfWork.Repository<Student>().FindAll().ProjectTo<StudentDTO>(mapper.ConfigurationProvider);
-            var paginatedResult = new PaginatedResult<StudentDTO>();
-            if (allData != null)
-            {
-                allData = allData.OrderBy(request.OrderBy);
-                paginatedResult = await allData.ToPaginatedListAsync(request.PageNumber, request.PageSize);
-            }
-            if (request.OrderBy != null)
-            {
-
-            }
-
-
-            return Result<PaginatedResult<StudentDTO>>.Success(paginatedResult);
         }
 
 

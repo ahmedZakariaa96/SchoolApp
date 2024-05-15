@@ -23,7 +23,7 @@ namespace School.Application.Base.Shared
             StatusResult = statusResult;
         }
 
-        public static Result<T> Success(T Data, string Message = "Falid")
+        public static Result<T> Success(T Data, string Message = "Success")
         {
             return new Result<T>()
             {

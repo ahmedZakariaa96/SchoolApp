@@ -17,4 +17,10 @@
         StudId,
         DepName
     }
+    public enum Language
+    {
+        english,
+        arabic
+
+    }
 }

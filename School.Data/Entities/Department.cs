@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace School.Domain.Entities
 {
     public class Department
     {
+
         [Key]
         public int DepId { get; set; }
         [StringLength(500)]

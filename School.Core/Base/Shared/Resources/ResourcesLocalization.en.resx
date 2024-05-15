@@ -117,8 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ChractersLenght" xml:space="preserve">
+    <value>Chracters Should less then or equal 10 Chracters</value>
+  </data>
+  <data name="Exist" xml:space="preserve">
+    <value>Record Exist </value>
+  </data>
   <data name="Falid" xml:space="preserve">
     <value>Falid To Save</value>
+  </data>
+  <data name="NotEmpty" xml:space="preserve">
+    <value>Is Not Empty </value>
+  </data>
+  <data name="NotExists" xml:space="preserve">
+    <value>Record  Is Not Exists</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Save Successfully</value>

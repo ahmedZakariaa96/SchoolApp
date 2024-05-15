@@ -1,0 +1,120 @@
+ExceptionID : 77f0b557-4cba-41ff-89e4-07317ae65d39
+Date : 5/9/2024 4:38:24 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: MaximumLengthValidator , Name: Name Chracters Should less then or equal 10 Chracters
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+MaximumLengthValidator , Name: Name Chracters Should less then or equal 10 Chracters
+
+######################################################################################################################################
+
+
+ExceptionID : b40ca8c3-b8d9-403d-9989-8ee207c4e3f4
+Date : 9‏‏/5‏‏/2024 4:39:28 م
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: MaximumLengthValidator , Name: Name عدد الحروف يجب ان تكون اقل من او يساوي 10
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+MaximumLengthValidator , Name: Name عدد الحروف يجب ان تكون اقل من او يساوي 10
+
+######################################################################################################################################
+
+
+ExceptionID : 86e4a4d8-fd4a-484c-922e-3646a0f493b0
+Date : 9‏‏/5‏‏/2024 4:40:23 م
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , Name: Nameالريكورد موجود موسبقأ
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , Name: Nameالريكورد موجود موسبقأ
+
+######################################################################################################################################
+
+
+ExceptionID : b45755c9-9c89-41a2-be68-6d53dceb18c7
+Date : 9‏‏/5‏‏/2024 6:19:00 م
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , Name: Nameالريكورد موجود موسبقأ
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , Name: Nameالريكورد موجود موسبقأ
+
+######################################################################################################################################
+
+
+ExceptionID : b4e78117-8616-4241-a157-a72e2e1c9bd4
+Date : 9‏‏/5‏‏/2024 6:20:13 م
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , Name: الريكورد موجود موسبقأ
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , Name: الريكورد موجود موسبقأ
+
+######################################################################################################################################
+
+
+ExceptionID : d992c57c-11ae-4fdc-8af0-0283dac0ebdc
+Date : 5/9/2024 6:20:57 PM
+Request : CreateStudentSchool.Application.Handlers.StudentFeature.Commends.CreateStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , Name: Record Exist 
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , Name: Record Exist 
+
+######################################################################################################################################
+
+
+ExceptionID : 15510881-9735-4f84-8a65-1ba12425e7ad
+Date : 5/9/2024 7:16:39 PM
+Request : GetAllStudentSchool.Application.Handlers.StudentFeature.Queries.GetAllStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: The LINQ expression 'DbSet<Student>()
+    .OrderBy(s => GenericLocalizable.Localizable(
+        strEng: s.NameEn, 
+        strAr: s.NameAr))' could not be translated. Additional information: Translation of method 'School.Application.Base.Shared.GenericLocalizable.Localizable' failed. If this method can be mapped to your custom function, see https://go.microsoft.com/fwlink/?linkid=2132413 for more information. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+Source: Microsoft.EntityFrameworkCore
+
+
+######################################################################################################################################
+
+
+ExceptionID : 959c0563-8636-41ba-bf18-c7ad93027e89
+Date : 5/9/2024 7:18:54 PM
+Request : GetAllStudentSchool.Application.Handlers.StudentFeature.Queries.GetAllStudent
+----------------------------------------------------------------------------
+Exception
+Exception Message: The LINQ expression 'DbSet<Student>()
+    .OrderBy(s => GenericLocalizable.Localizable(
+        strEng: s.NameEn, 
+        strAr: s.NameAr))' could not be translated. Additional information: Translation of method 'School.Application.Base.Shared.GenericLocalizable.Localizable' failed. If this method can be mapped to your custom function, see https://go.microsoft.com/fwlink/?linkid=2132413 for more information. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+Source: Microsoft.EntityFrameworkCore
+
+
+######################################################################################################################################
+
+

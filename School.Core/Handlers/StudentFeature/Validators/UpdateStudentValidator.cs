@@ -22,9 +22,6 @@ namespace School.Application.Handlers.StudentFeature.Validators
                 .NotNull().WithMessage("{PropertyName} is NotNull")
                 .MaximumLength(10).WithMessage("{PropertyName} should have 10 chracters");
 
-
-
-
         }
         public void applyCustomeValidation()
         {
