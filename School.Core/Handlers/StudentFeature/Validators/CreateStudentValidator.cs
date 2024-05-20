@@ -24,7 +24,7 @@ namespace School.Application.Handlers.StudentFeature.Validators
         {
             var x = Localizer[ResourcesLocalizationKeys.NotEmpty];
 
-            RuleFor(x => x.Name)
+            RuleFor(x => x.NameEn)
                 .NotEmpty().WithMessage(Localizer[ResourcesLocalizationKeys.NotEmpty])
                 .MaximumLength(10).WithMessage(Localizer[ResourcesLocalizationKeys.ChractersLenght]);
 
@@ -34,7 +34,7 @@ namespace School.Application.Handlers.StudentFeature.Validators
         }
         public void applyCustomeValidation()
         {
-            RuleFor(x => x.Name).MustAsync(async (Key, CancellationToken) => !await this.studentService.IsNameExist(Key))
+            RuleFor(x => x.NameEn).MustAsync(async (Key, CancellationToken) => !await this.studentService.IsNameExist(Key))
                 .WithMessage(Localizer[ResourcesLocalizationKeys.Exist]);
         }
 

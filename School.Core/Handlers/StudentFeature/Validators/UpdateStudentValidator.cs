@@ -17,7 +17,7 @@ namespace School.Application.Handlers.StudentFeature.Validators
         public async void applyValidationRule()
         {
 
-            RuleFor(x => x.Name)
+            RuleFor(x => x.NameEn)
                 .NotEmpty().WithMessage("{PropertyName} is NotEmpty")
                 .NotNull().WithMessage("{PropertyName} is NotNull")
                 .MaximumLength(10).WithMessage("{PropertyName} should have 10 chracters");
@@ -25,7 +25,7 @@ namespace School.Application.Handlers.StudentFeature.Validators
         }
         public void applyCustomeValidation()
         {
-            RuleFor(x => x.Name).MustAsync(async (Model, Key, CancellationToken) => !await this.studentService.IsNameExist(Key, Model.Id))
+            RuleFor(x => x.NameEn).MustAsync(async (Model, Key, CancellationToken) => !await this.studentService.IsNameExist(Key, Model.Id))
                 .WithMessage("Name is exist ");
         }
 

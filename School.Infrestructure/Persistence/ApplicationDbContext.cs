@@ -1,14 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using School.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace School.Infrestructure.Persistence
 {
-    public class ApplicationDbContext : DbContext
+    public partial class ApplicationDbContext : DbContext
     {
         public virtual DbSet<Department> departments { get; set; }
         public virtual DbSet<DepartmetSubject> DepartmetSubjects { get; set; }
@@ -25,7 +20,16 @@ namespace School.Infrestructure.Persistence
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }
-      
- 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+
+            OnModelCreatingPartial(modelBuilder);
+        }
+
+        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+
     }
 }

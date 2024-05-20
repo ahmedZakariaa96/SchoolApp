@@ -12,7 +12,9 @@ namespace School.Application.Handlers.StudentFeature.Commends
 {
     public class CreateStudent : IRequest<Result<string>>, IMapFrom<Student>
     {
-        public string? Name { get; set; }
+        public string NameEn { get; set; }
+        public string? NameAr { get; set; }
+
 
         public string Phone { get; set; }
 
@@ -49,7 +51,7 @@ namespace School.Application.Handlers.StudentFeature.Commends
             var result = Result<string>.Info(null, StatusResult.Exist, Localizer[ResourcesLocalizationKeys.Exist]);
 
             var cureentStudent = await this.unitOfWork.Repository<Student>()
-                .FindByCondition(x => x.NameEn.ToLower() == request.Name.ToLower()).FirstOrDefaultAsync();
+                .FindByCondition(x => x.NameEn.ToLower() == request.NameEn.ToLower()).FirstOrDefaultAsync();
             if (cureentStudent != null)
             {
                 return Result<string>.Info(cureentStudent.StudId.ToString(), StatusResult.Exist, Localizer[ResourcesLocalizationKeys.Exist]);
