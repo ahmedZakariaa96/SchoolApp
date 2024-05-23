@@ -31,6 +31,22 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
     options.SupportedUICultures = supportedCultures;
 });
 #endregion
+
+#region CORS
+
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins("http://localhost:4200")
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                      });
+});
+#endregion
 //----------------------------------------------------------------------
 
 
@@ -43,6 +59,11 @@ app.UseMiddleware<ErrorHandlerMiddleware>();
 
 var options = app.Services.GetService<IOptions<RequestLocalizationOptions>>();
 app.UseRequestLocalization(options.Value);
+#endregion
+
+#region CORS
+app.UseCors(MyAllowSpecificOrigins);
+
 #endregion
 
 // Configure the HTTP request pipeline.

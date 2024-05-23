@@ -10,6 +10,7 @@ namespace School.Infrestructure.Persistence.Configurations
         {
             builder.ToTable("Student");
 
+
             builder.HasKey(e => e.StudId).HasName("Pk_StudId");
             builder.Property(e => e.StudId).ValueGeneratedOnAdd();
 
