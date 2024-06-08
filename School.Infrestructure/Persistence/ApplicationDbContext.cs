@@ -1,15 +1,18 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using School.Domain.Entities;
 
 namespace School.Infrestructure.Persistence
 {
-    public partial class ApplicationDbContext : DbContext
+    public partial class ApplicationDbContext : IdentityDbContext<User>
     {
         public virtual DbSet<Department> departments { get; set; }
         public virtual DbSet<DepartmetSubject> DepartmetSubjects { get; set; }
 
         public virtual DbSet<Student> Students { get; set; }
         public virtual DbSet<Subject> Subjects { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+
         public virtual DbSet<StudentSubject> StudentSubjects { get; set; }
 
         public ApplicationDbContext()
