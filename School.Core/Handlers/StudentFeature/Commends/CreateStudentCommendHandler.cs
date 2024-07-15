@@ -36,11 +36,11 @@ namespace School.Application.Handlers.StudentFeature.Commends
 
         private readonly IMapper mapper;
 
-        public CreateStudentCommendHandler(IUnitOfWork unitOfWork, IMapper mapper, IStringLocalizer<ResourcesLocalization> _localizer)
+        public CreateStudentCommendHandler(IUnitOfWork unitOfWork, IMapper mapper, IStringLocalizer<ResourcesLocalization> Localizer)
         {
             this.unitOfWork = unitOfWork;
             this.mapper = mapper;
-            Localizer = _localizer;
+            Localizer = Localizer;
         }
 
         public IStringLocalizer<ResourcesLocalization> Localizer { get; }

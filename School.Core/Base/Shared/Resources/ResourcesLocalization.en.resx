@@ -126,11 +126,20 @@
   <data name="Falid" xml:space="preserve">
     <value>Falid To Save</value>
   </data>
+  <data name="MaxLengthis100" xml:space="preserve">
+    <value>MaxLeng Length is 100</value>
+  </data>
   <data name="NotEmpty" xml:space="preserve">
     <value>Is Not Empty </value>
   </data>
   <data name="NotExists" xml:space="preserve">
     <value>Record  Is Not Exists</value>
+  </data>
+  <data name="PasswordNotEqualConfirmPass" xml:space="preserve">
+    <value>Password Not Equal Confirm Password</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>Required</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Save Successfully</value>

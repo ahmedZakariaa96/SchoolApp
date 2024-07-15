@@ -20,11 +20,11 @@ namespace School.Application.Handlers.StudentFeature.Commends
 
         private readonly IMapper mapper;
 
-        public DeleteStudentCommendHandler(IUnitOfWork unitOfWork, IMapper mapper, IStringLocalizer<ResourcesLocalization> _localizer)
+        public DeleteStudentCommendHandler(IUnitOfWork unitOfWork, IMapper mapper, IStringLocalizer<ResourcesLocalization> Localizer)
         {
             this.unitOfWork = unitOfWork;
             this.mapper = mapper;
-            Localizer = _localizer;
+            Localizer = Localizer;
 
         }
         public async Task<Result<string>> Handle(DeleteStudent request, CancellationToken cancellationToken)

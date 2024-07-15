@@ -1,0 +1,27 @@
+ExceptionID : 5de2504f-1484-4e8f-a1bd-7da481baefdd
+Date : 6/28/2024 9:35:37 PM
+Request : CreateUserSchool.Application.Handlers.ApplicationUser.Commands.CreateUser
+----------------------------------------------------------------------------
+Exception
+Exception Message: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+Source: Microsoft.EntityFrameworkCore
+
+
+######################################################################################################################################
+
+
+ExceptionID : ed5178f2-7663-467a-a6ae-e38fb2887140
+Date : 6/28/2024 9:37:32 PM
+Request : CreateUserSchool.Application.Handlers.ApplicationUser.Commands.CreateUser
+----------------------------------------------------------------------------
+Exception
+Exception Message: EqualValidator , ConfirmPassword: Password Not Equal Confirm Password
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+EqualValidator , ConfirmPassword: Password Not Equal Confirm Password
+
+######################################################################################################################################
+
+

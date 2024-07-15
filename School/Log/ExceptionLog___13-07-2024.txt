@@ -1,0 +1,27 @@
+ExceptionID : 2cc05df8-3bad-4885-87cf-953eda30ad9e
+Date : 7/13/2024 10:02:56 PM
+Request : CreateUserSchool.Application.Handlers.ApplicationUser.Commands.CreateUser
+----------------------------------------------------------------------------
+Exception
+Exception Message: EqualValidator , ConfirmPassword: Password Not Equal Confirm Password
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+EqualValidator , ConfirmPassword: Password Not Equal Confirm Password
+
+######################################################################################################################################
+
+
+ExceptionID : 78325ff2-6e13-4043-a963-43ce1a2b1264
+Date : 7/13/2024 10:36:21 PM
+Request : DeleteUserDeleteUser { Id = b5b3415f-b4ef-4d5c-b3ee-3a9ff9506219 }
+----------------------------------------------------------------------------
+Exception
+Exception Message: The method or operation is not implemented.
+Source: School.Application
+
+
+######################################################################################################################################
+
+

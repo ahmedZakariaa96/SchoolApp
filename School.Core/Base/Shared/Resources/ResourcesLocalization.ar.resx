@@ -126,11 +126,20 @@
   <data name="Falid" xml:space="preserve">
     <value>فشل الحفظ </value>
   </data>
+  <data name="MaxLengthis100" xml:space="preserve">
+    <value>عدد الحروف يجب ان تكون اقل من او يساوي 100</value>
+  </data>
   <data name="NotEmpty" xml:space="preserve">
     <value>لا يكون فاضي</value>
   </data>
   <data name="NotExists" xml:space="preserve">
     <value>الريكورد غير موجود</value>
+  </data>
+  <data name="PasswordNotEqualConfirmPass" xml:space="preserve">
+    <value>الباسورد لا يساوي التاكيد باسورد</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>مطلوب</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>تم الحفظ بنجاح </value>

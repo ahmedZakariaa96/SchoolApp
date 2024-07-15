@@ -12,10 +12,10 @@ namespace School.Application.Handlers.StudentFeature.Validators
 
         public IStringLocalizer<ResourcesLocalization> Localizer { get; }
 
-        public CreateStudentValidator(IStudentService studentService, IStringLocalizer<ResourcesLocalization> _localizer)
+        public CreateStudentValidator(IStudentService studentService, IStringLocalizer<ResourcesLocalization> Localizer)
         {
             this.studentService = studentService;
-            Localizer = _localizer;
+            Localizer = Localizer;
             applyValidationRule();
             applyCustomeValidation();
 

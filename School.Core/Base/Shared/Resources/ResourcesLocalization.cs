@@ -12,6 +12,13 @@
         public static string NotExists = "NotExists";
         public static string NotEmpty = "NotEmpty";
         public static string ChractersLenght = "ChractersLenght";
+        //----------------------------------------------------------------
+        public static string PasswordNotEqualConfirmPass = "PasswordNotEqualConfirmPass";
+        public static string MaxLengthis100 = "MaxLengthis100";
+        public static string Required = "Required";
+        //----------------------------------------------------------------
+
+
 
 
 
