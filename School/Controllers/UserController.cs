@@ -38,6 +38,13 @@ namespace School.API.Controllers
         {
             return Single(await CommandAsync(updateUser));
         }
+
+        [HttpPut]
+        [Route("ChangePassword")]
+        public async Task<ActionResult<Result<string>>> ChangePassword(ChangePassword changePassword)
+        {
+            return Single(await CommandAsync(changePassword));
+        }
         [HttpDelete]
         [Route("Delete")]
         public async Task<ActionResult<Result<string>>> DeleteUser(string id)

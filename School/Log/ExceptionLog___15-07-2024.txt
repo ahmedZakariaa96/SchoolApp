@@ -1,0 +1,15 @@
+ExceptionID : 6f36d01a-e682-4433-aaee-b6e86f68745d
+Date : 7/15/2024 8:41:21 PM
+Request : ChangePasswordSchool.Application.Handlers.ApplicationUser.Commands.ChangePassword
+----------------------------------------------------------------------------
+Exception
+Exception Message: NotEqualValidator , OldPaasword: New Password should'nt equal old Password
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+NotEqualValidator , OldPaasword: New Password should'nt equal old Password
+
+######################################################################################################################################
+
+

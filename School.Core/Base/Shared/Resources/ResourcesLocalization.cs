@@ -17,6 +17,9 @@
         public static string MaxLengthis100 = "MaxLengthis100";
         public static string Required = "Required";
         //----------------------------------------------------------------
+        public static string ChangePassword = "ChangePassword";
+        public static string PasswordNotEqual = "PasswordNotEqual";
+
 
 
 

@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Password Changed Successfully</value>
+  </data>
   <data name="ChractersLenght" xml:space="preserve">
     <value>Chracters Should less then or equal 10 Chracters</value>
   </data>
@@ -134,6 +137,9 @@
   </data>
   <data name="NotExists" xml:space="preserve">
     <value>Record  Is Not Exists</value>
+  </data>
+  <data name="PasswordNotEqual" xml:space="preserve">
+    <value>New Password should'nt equal old Password</value>
   </data>
   <data name="PasswordNotEqualConfirmPass" xml:space="preserve">
     <value>Password Not Equal Confirm Password</value>
