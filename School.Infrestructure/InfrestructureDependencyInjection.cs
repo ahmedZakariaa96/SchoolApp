@@ -17,6 +17,10 @@ namespace School.Infrestructure
             return services;
         }
 
+
+
+
+
         public static void AddDbContext(this IServiceCollection services, IConfiguration configuration)
         {
             var connectionString = configuration.GetConnectionString("DefaultConnection");

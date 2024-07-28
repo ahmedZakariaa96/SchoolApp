@@ -19,6 +19,10 @@
         //----------------------------------------------------------------
         public static string ChangePassword = "ChangePassword";
         public static string PasswordNotEqual = "PasswordNotEqual";
+        //----------------------------------------------------------------
+        public static string SignInMessages = "SignInMessages";
+
+
 
 
 

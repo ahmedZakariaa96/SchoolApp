@@ -150,4 +150,7 @@
   <data name="Save" xml:space="preserve">
     <value>Save Successfully</value>
   </data>
+  <data name="SignInMessages" xml:space="preserve">
+    <value>UserName Or Password Is Incorect</value>
+  </data>
 </root>

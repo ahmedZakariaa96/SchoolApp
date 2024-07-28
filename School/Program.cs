@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
 using School.Application;
 using School.Application.Base.Middleware;
+using School.Application.Base.Shared.Authentication;
 using School.Domain.Entities;
 using School.Infrestructure;
 using School.Infrestructure.Persistence;
@@ -78,6 +79,11 @@ builder.Services.AddCors(options =>
                           .AllowAnyMethod();
                       });
 });
+#endregion
+
+#region jwtSettings
+var jwtSettingsw = builder.Configuration.GetSection("jwtSettings").Get<JwtSettings>();
+builder.Services.AddSingleton(jwtSettingsw);
 #endregion
 //----------------------------------------------------------------------
 
