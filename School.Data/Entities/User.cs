@@ -7,5 +7,7 @@ namespace School.Domain.Entities
         public string Address { get; set; }
         public int Age { get; set; }
 
+        public virtual ICollection<UserRefreshToken> UserRefreshTokens { get; set; } = new HashSet<UserRefreshToken>();
+
     }
 }

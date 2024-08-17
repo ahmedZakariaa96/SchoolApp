@@ -12,6 +12,8 @@ namespace School.Infrestructure.Persistence
         public virtual DbSet<Student> Students { get; set; }
         public virtual DbSet<Subject> Subjects { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<UserRefreshToken> UserRefreshes { get; set; }
+
 
         public virtual DbSet<StudentSubject> StudentSubjects { get; set; }
 

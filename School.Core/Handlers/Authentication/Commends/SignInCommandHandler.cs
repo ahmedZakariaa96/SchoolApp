@@ -3,18 +3,19 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Localization;
 using School.Application.Base.Shared;
 using School.Application.Base.Shared.Resources;
+using School.Application.DTO;
 using School.Application.Handlers.Authentication.Services;
 using School.Domain.Entities;
 
 namespace School.Application.Handlers.Authentication.Commends
 {
-    public class SignInCommand : IRequest<Result<string>>
+    public class SignInCommand : IRequest<Result<JwtAuthResult>>
     {
         public string UserName { get; set; }
         public string Password { get; set; }
 
     }
-    public class SignInCommandHandler : IRequestHandler<SignInCommand, Result<string>>
+    public class SignInCommandHandler : IRequestHandler<SignInCommand, Result<JwtAuthResult>>
     {
         private readonly UserManager<User> userManager;
         public IStringLocalizer<ResourcesLocalization> localizer { get; }
@@ -32,9 +33,10 @@ namespace School.Application.Handlers.Authentication.Commends
         }
 
 
-        public async Task<Result<string>> Handle(SignInCommand request, CancellationToken cancellationToken)
+        public async Task<Result<JwtAuthResult>> Handle(SignInCommand request, CancellationToken cancellationToken)
         {
-            var result = Result<string>.Info(request.UserName, StatusResult.NotExists, localizer[ResourcesLocalizationKeys.NotExists]);
+
+            var result = Result<JwtAuthResult>.Info(new JwtAuthResult(), StatusResult.NotExists, localizer[ResourcesLocalizationKeys.NotExists]);
 
             var user = await this.userManager.FindByNameAsync(request.UserName);
             if (user == null)
@@ -45,13 +47,13 @@ namespace School.Application.Handlers.Authentication.Commends
             var signInResult = await this.signInManager.CheckPasswordSignInAsync(user, request.Password, false);
             if (!signInResult.Succeeded)
             {
-                result = Result<string>.Falid(request.UserName, localizer[ResourcesLocalizationKeys.SignInMessages]);
+                result = Result<JwtAuthResult>.Falid(new JwtAuthResult(), localizer[ResourcesLocalizationKeys.SignInMessages]);
             }
 
 
-            var AccessToken = await AuthenticationService.GetJWTToken(user);
+            var jwtAuthResult = await AuthenticationService.GetJWTToken(user);
 
-            return Result<string>.Success(AccessToken);
+            return Result<JwtAuthResult>.Success(jwtAuthResult);
 
 
         }

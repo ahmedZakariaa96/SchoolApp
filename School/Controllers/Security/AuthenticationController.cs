@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using School.API.Controllers.Base;
 using School.Application.Base.Shared;
+using School.Application.DTO;
 using School.Application.Handlers.Authentication.Commends;
 
 namespace School.API.Controllers.Security
@@ -12,7 +13,7 @@ namespace School.API.Controllers.Security
 
         [HttpPost]
         [Route("SignInCommand")]
-        public async Task<ActionResult<Result<string>>> SignInCommand(SignInCommand signInCommand)
+        public async Task<ActionResult<Result<JwtAuthResult>>> SignInCommand([FromForm] SignInCommand signInCommand)
         {
             return Single(await CommandAsync(signInCommand));
         }
