@@ -1,0 +1,12 @@
+ExceptionID : 55c0d5e7-3aee-409c-9cc6-78f5b04eed21
+Date : 8/31/2024 10:51:42 PM
+Request : RefreshTokenCommandSchool.Application.Handlers.Authentication.Commends.RefreshTokenCommand
+----------------------------------------------------------------------------
+Exception
+Exception Message: Object reference not set to an instance of an object.
+Source: School.Application
+
+
+######################################################################################################################################
+
+

@@ -38,14 +38,14 @@ namespace School.Application.Handlers.Authentication.Commends
 
                 var userIdAndExpireDate = await authenticationServiceAction.ValidateDetails(jwtTokenResult.Data, request.AcessToken, request.RefreshToken);
 
-                switch (userIdAndExpireDate)
-                {
+                //switch (userIdAndExpireDate)
+                //{
 
-                    case ("AlgorithmIsWrong", null): return Result<JwtAuthResult>.Falid(null, "AlgorithmIsWrong");
-                    case ("TokenIsNotExpired", null): return Result<JwtAuthResult>.Falid(null, "TokenIsNotExpired");
-                    case ("RefreshTokenIsNotFound", null): return Result<JwtAuthResult>.Falid(null, "RefreshTokenIsNotFound");
-                    case ("RefreshTokenIsExpired", null): return Result<JwtAuthResult>.Falid(null, "RefreshTokenIsExpired");
-                }
+                //    case ("AlgorithmIsWrong", null): return Result<JwtAuthResult>.Falid(null, "AlgorithmIsWrong");
+                //    case ("TokenIsNotExpired", null): return Result<JwtAuthResult>.Falid(null, "TokenIsNotExpired");
+                //    case ("RefreshTokenIsNotFound", null): return Result<JwtAuthResult>.Falid(null, "RefreshTokenIsNotFound");
+                //    case ("RefreshTokenIsExpired", null): return Result<JwtAuthResult>.Falid(null, "RefreshTokenIsExpired");
+                //}
 
                 var (userId, expiredDate) = userIdAndExpireDate;
                 var user = await userManager.FindByIdAsync(userId);

@@ -121,14 +121,14 @@ namespace School.Application.Handlers.Authentication.Services
 
         public async Task<(string, DateTime?)> ValidateDetails(JwtSecurityToken jwtToken, string accessToken, string refreshToken)
         {
-            if (jwtToken == null || !jwtToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256Signature))
-            {
-                return ("AlgorithmIsWrong", null);
-            }
-            if (jwtToken.ValidTo > DateTime.UtcNow)
-            {
-                return ("TokenIsNotExpired", null);
-            }
+            //if (jwtToken == null || !jwtToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256Signature))
+            //{
+            //    return ("AlgorithmIsWrong", null);
+            //}
+            //if (jwtToken.ValidTo > DateTime.UtcNow)
+            //{
+            //    return ("TokenIsNotExpired", null);
+            //}
 
             //Get User
 
@@ -159,7 +159,9 @@ namespace School.Application.Handlers.Authentication.Services
             var (JwtSecurity, accessToken) = await CreatToken(claims);
 
             var refreshTokenResult = new RefreshToken();
-            refreshTokenResult.UserName = jwtToken.Claims.FirstOrDefault(x => x.Type == nameof(UserClaimModel.UserName)).Value;
+            //refreshTokenResult.UserName = jwtToken.Claims.FirstOrDefault(x => x.Type == nameof(UserClaimModel.nameIdentifier)).Value;
+            refreshTokenResult.UserName = user.UserName;
+
             refreshTokenResult.TokenString = refreshToken;
             refreshTokenResult.ExpireAt = (DateTime)expiryDate;
 
