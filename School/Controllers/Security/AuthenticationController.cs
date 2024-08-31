@@ -17,6 +17,12 @@ namespace School.API.Controllers.Security
         {
             return Single(await CommandAsync(signInCommand));
         }
+        [HttpPost]
+        [Route("RefreshToken")]
+        public async Task<ActionResult<Result<JwtAuthResult>>> RefreshToken([FromForm] RefreshTokenCommand refreshTokenCommand)
+        {
+            return Single(await CommandAsync(refreshTokenCommand));
+        }
 
     }
 }

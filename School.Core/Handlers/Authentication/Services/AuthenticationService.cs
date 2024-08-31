@@ -1,4 +1,6 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using School.Application.Base.Shared;
 using School.Application.Base.Shared.Authentication;
 using School.Application.DTO;
 using School.Domain.Entities;
@@ -37,7 +39,6 @@ namespace School.Application.Handlers.Authentication.Services
             return res >= 1 ? jwtAuthResult : new JwtAuthResult();
 
         }
-
         private List<Claim> GetClaims(User user)
         {
             return new List<Claim>()
@@ -102,5 +103,78 @@ namespace School.Application.Handlers.Authentication.Services
 
 
         }
+
+        //-----------------------------------------------------------------------------------------
+        public Result<JwtSecurityToken> ReadJWTToken(string AcessToken)
+        {
+            if (string.IsNullOrWhiteSpace(AcessToken))
+            {
+                return Result<JwtSecurityToken>.Falid(null);
+
+            }
+            else
+            {
+                var jwtSecurityToken = new JwtSecurityTokenHandler().ReadJwtToken(AcessToken);
+                return Result<JwtSecurityToken>.Success(jwtSecurityToken);
+            }
+        }
+
+        public async Task<(string, DateTime?)> ValidateDetails(JwtSecurityToken jwtToken, string accessToken, string refreshToken)
+        {
+            if (jwtToken == null || !jwtToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256Signature))
+            {
+                return ("AlgorithmIsWrong", null);
+            }
+            if (jwtToken.ValidTo > DateTime.UtcNow)
+            {
+                return ("TokenIsNotExpired", null);
+            }
+
+            //Get User
+
+            var userId = jwtToken.Claims.FirstOrDefault(x => x.Type == nameof(UserClaimModel.Id)).Value;
+
+            var userRefreshToken = await unitOfWork.Repository<UserRefreshToken>()
+                                             .FindByCondition(x => x.Token == accessToken &&
+                                                                     x.RefreshToken == refreshToken &&
+                                                                     x.UserId == userId).FirstOrDefaultAsync();
+            if (userRefreshToken == null)
+            {
+                return ("RefreshTokenIsNotFound", null);
+            }
+
+            if (userRefreshToken.ExpiryDate < DateTime.UtcNow)
+            {
+                userRefreshToken.IsRevoked = true;
+                userRefreshToken.IsUsed = false;
+                unitOfWork.Repository<UserRefreshToken>().Update(userRefreshToken);
+                return ("RefreshTokenIsExpired", null);
+            }
+            var expirydate = userRefreshToken.ExpiryDate;
+            return (userId, expirydate);
+        }
+        public async Task<JwtAuthResult> GetRefreshToken(User user, JwtSecurityToken jwtToken, DateTime? expiryDate, string refreshToken)
+        {
+            var claims = GetClaims(user);
+            var (JwtSecurity, accessToken) = await CreatToken(claims);
+
+            var refreshTokenResult = new RefreshToken();
+            refreshTokenResult.UserName = jwtToken.Claims.FirstOrDefault(x => x.Type == nameof(UserClaimModel.UserName)).Value;
+            refreshTokenResult.TokenString = refreshToken;
+            refreshTokenResult.ExpireAt = (DateTime)expiryDate;
+
+            JwtAuthResult jwtAuthResult = new JwtAuthResult
+            {
+                AcessToken = accessToken,
+                RefreshToken = refreshTokenResult
+            };
+            return jwtAuthResult;
+        }
+
+
+
+
+
+
     }
 }
