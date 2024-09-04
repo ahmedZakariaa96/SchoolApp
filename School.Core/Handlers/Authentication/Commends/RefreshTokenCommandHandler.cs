@@ -34,6 +34,7 @@ namespace School.Application.Handlers.Authentication.Commends
                 return Result<JwtAuthResult>.Falid(null);
             }
             else
+
             {
 
                 var userIdAndExpireDate = await authenticationServiceAction.ValidateDetails(jwtTokenResult.Data, request.AcessToken, request.RefreshToken);
