@@ -5,6 +5,7 @@ using School.Application;
 using School.Application.Base.Middleware;
 using School.Application.Base.Shared.Authentication;
 using School.Domain.Entities;
+using School.Domain.Entities.IdentityServer;
 using School.Infrestructure;
 using School.Infrestructure.Persistence;
 using System.Globalization;
@@ -41,7 +42,7 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 #endregion
 
 #region AddIdentity
-builder.Services.AddIdentity<User, IdentityRole>(option =>
+builder.Services.AddIdentity<User, Role>(option =>
 {
     // Password settings.
     option.Password.RequireDigit = true;

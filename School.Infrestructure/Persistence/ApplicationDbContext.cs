@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using School.Domain.Entities;
+using School.Domain.Entities.IdentityServer;
 
 namespace School.Infrestructure.Persistence
 {
@@ -12,6 +13,8 @@ namespace School.Infrestructure.Persistence
         public virtual DbSet<Student> Students { get; set; }
         public virtual DbSet<Subject> Subjects { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
+
         public virtual DbSet<UserRefreshToken> UserRefreshes { get; set; }
 
 

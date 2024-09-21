@@ -1,0 +1,65 @@
+ExceptionID : 4abe9729-0956-4f6b-96fd-0c87b1ee223a
+Date : 9/21/2024 5:03:08 PM
+Request : CreateRoleCreateRole { roleName = admin }
+----------------------------------------------------------------------------
+Exception
+Exception Message: Cannot create a DbSet for 'Role' because this type is not included in the model for the context.
+Source: Microsoft.EntityFrameworkCore
+
+
+######################################################################################################################################
+
+
+ExceptionID : 6df627bc-ae5c-47a1-9326-55c88ff70c49
+Date : 9/21/2024 5:04:51 PM
+Request : CreateRoleCreateRole { roleName = Admin }
+----------------------------------------------------------------------------
+Exception
+Exception Message: Invalid column name 'Discriminator'.
+Invalid column name 'Discriminator'.
+Source: Core Microsoft SqlClient Data Provider
+
+
+######################################################################################################################################
+
+
+ExceptionID : e6128e42-3961-4dc5-ab13-313bc17e8f3d
+Date : 9/21/2024 5:05:28 PM
+Request : CreateRoleCreateRole { roleName = Admin }
+----------------------------------------------------------------------------
+Exception
+Exception Message: Invalid column name 'Discriminator'.
+Invalid column name 'Discriminator'.
+Source: Core Microsoft SqlClient Data Provider
+
+
+######################################################################################################################################
+
+
+ExceptionID : 66fd7f26-976b-4a5f-865c-8b58002eeea1
+Date : 9/21/2024 5:09:50 PM
+Request : CreateRoleCreateRole { roleName = Admin }
+----------------------------------------------------------------------------
+Exception
+Exception Message: Object reference not set to an instance of an object.
+Source: School.Application
+
+
+######################################################################################################################################
+
+
+ExceptionID : 51a89e6c-424c-4d7a-bdf0-47b12bd6d17a
+Date : 9/21/2024 5:11:42 PM
+Request : CreateRoleCreateRole { roleName = admin }
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , roleName: Record Exist 
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , roleName: Record Exist 
+
+######################################################################################################################################
+
+
