@@ -1,0 +1,15 @@
+ExceptionID : 3acc31b9-84da-4fa6-8fbe-6d27c84db3be
+Date : 11/20/2024 6:43:33 PM
+Request : CreateRoleCreateRole { roleName = ddddd }
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , roleName: Record Exist 
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , roleName: Record Exist 
+
+######################################################################################################################################
+
+

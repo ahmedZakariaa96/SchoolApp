@@ -14,7 +14,7 @@ namespace School.API.Controllers
     {
         [HttpPost]
         [Route("Create")]
-        public async Task<ActionResult<Result<string>>> AddStudent(CreateUser createUser)
+        public async Task<ActionResult<Result<string>>> AddUser(CreateUser createUser)
         {
             return Single(await CommandAsync(createUser));
         }
