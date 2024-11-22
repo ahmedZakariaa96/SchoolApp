@@ -1,0 +1,12 @@
+[
+  {
+    "FullName": "b3f2c4e2-7db1-42e5-9bf4-9db2d4d1a5e9",
+    "UserName": "Admin",
+    "Email": "Admin@example.com",
+    "Address": "Address 42",
+    "Country": "Country",
+    "PhoneNumber": "123-456-7890",
+    "PasswordHash": "Password123!"
+  }
+
+]

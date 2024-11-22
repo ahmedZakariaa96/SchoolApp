@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using School.Application;
 using School.Application.Base.Middleware;
@@ -8,6 +9,7 @@ using School.Domain.Entities;
 using School.Domain.Entities.IdentityServer;
 using School.Infrestructure;
 using School.Infrestructure.Persistence;
+using School.Infrestructure.Persistence.Seed;
 using System.Globalization;
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
@@ -110,6 +112,22 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+
+    #region Automatic Migrations Applying & Seeding Default Users And Roles -- Seeding Cancelled
+    using (var scope = app.Services.CreateScope())
+    {
+        var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+        db.Database.Migrate();
+        await DBSeed.SeedData(db);
+
+
+        var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
+        var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<Role>>();
+        await DBSeed.SeedUsers(userManager, roleManager);
+
+
+    }
+    #endregion
 }
 
 app.UseHttpsRedirection();
