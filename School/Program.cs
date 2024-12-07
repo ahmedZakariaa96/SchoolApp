@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using School.Application;
 using School.Application.Base.Middleware;
 using School.Application.Base.Shared.Authentication;
@@ -11,6 +13,7 @@ using School.Infrestructure;
 using School.Infrestructure.Persistence;
 using School.Infrestructure.Persistence.Seed;
 using System.Globalization;
+using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 #region Dependance Injection
@@ -43,7 +46,14 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 });
 #endregion
 
-#region AddIdentity
+
+#region jwtSettings
+var jwtSettings = builder.Configuration.GetSection("jwtSettings").Get<JwtSettings>();
+builder.Services.AddSingleton(jwtSettings);
+#endregion
+
+
+#region AddIdentity  
 builder.Services.AddIdentity<User, Role>(option =>
 {
     // Password settings.
@@ -66,6 +76,34 @@ builder.Services.AddIdentity<User, Role>(option =>
     option.SignIn.RequireConfirmedEmail = false;
 
 }).AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+
+
+
+
+#endregion
+
+#region AddJwtBearer
+
+builder.Services.AddAuthentication(x =>
+{
+    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(x =>
+{
+    x.RequireHttpsMetadata = false;
+    x.SaveToken = true;
+    x.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidIssuers = new[] { jwtSettings.Issuer },
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(jwtSettings.Secret)),
+        ValidAudience = jwtSettings.Audience,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+    };
+});
 #endregion
 
 #region CORS
@@ -84,10 +122,7 @@ builder.Services.AddCors(options =>
 });
 #endregion
 
-#region jwtSettings
-var jwtSettingsw = builder.Configuration.GetSection("jwtSettings").Get<JwtSettings>();
-builder.Services.AddSingleton(jwtSettingsw);
-#endregion
+
 //----------------------------------------------------------------------
 
 
@@ -132,8 +167,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();

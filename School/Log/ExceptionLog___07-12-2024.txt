@@ -1,0 +1,60 @@
+ExceptionID : d1b2221d-f4de-4189-a384-fb9dcad7b665
+Date : 12/7/2024 1:41:22 PM
+Request : CreateRoleCreateRole { roleName = Read }
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , roleName: Record Exist 
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , roleName: Record Exist 
+
+######################################################################################################################################
+
+
+ExceptionID : 6c6390d8-4a2b-4229-b162-73623f81f31c
+Date : 12/7/2024 1:54:37 PM
+Request : CreateRoleCreateRole { roleName = read }
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , roleName: Record Exist 
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , roleName: Record Exist 
+
+######################################################################################################################################
+
+
+ExceptionID : 8edaff2c-d5b3-4203-bd60-8a32a324c545
+Date : 7‏‏/12‏‏/2024 1:55:10 م
+Request : CreateRoleCreateRole { roleName = read }
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , roleName: الريكورد موجود موسبقأ
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , roleName: الريكورد موجود موسبقأ
+
+######################################################################################################################################
+
+
+ExceptionID : e1942124-4f45-480d-9f86-f183bac8c251
+Date : 7‏‏/12‏‏/2024 2:38:01 م
+Request : CreateRoleCreateRole { roleName = Test }
+----------------------------------------------------------------------------
+Exception
+Exception Message: AsyncPredicateValidator , roleName: الريكورد موجود موسبقأ
+Source: School.Application
+
+----------------------------------------------------------------------------
+errors
+AsyncPredicateValidator , roleName: الريكورد موجود موسبقأ
+
+######################################################################################################################################
+
+

@@ -50,8 +50,8 @@ namespace School.Application.Handlers.Authentication.Commends
                 result = Result<JwtAuthResult>.Falid(new JwtAuthResult(), localizer[ResourcesLocalizationKeys.SignInMessages]);
             }
 
-
-            var jwtAuthResult = await AuthenticationService.GetJWTToken(user);
+            var roles = await userManager.GetRolesAsync(user);
+            var jwtAuthResult = await AuthenticationService.GetJWTToken(user, roles.ToList());
 
             return Result<JwtAuthResult>.Success(jwtAuthResult);
 

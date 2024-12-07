@@ -23,9 +23,9 @@ namespace School.Application.Handlers.Authentication.Services
             jwtSettings = _jwtSettings;
             this.unitOfWork = _unitOfWork;
         }
-        public async Task<JwtAuthResult> GetJWTToken(User user)
+        public async Task<JwtAuthResult> GetJWTToken(User user, List<string> roles)
         {
-            var claims = GetClaims(user);
+            var claims = GetClaims(user, roles);
             var (JwtSecurity, accessToken) = await CreatToken(claims);
             var refreshToken = GetRefreshToken(user.UserName);
 
@@ -39,17 +39,22 @@ namespace School.Application.Handlers.Authentication.Services
             return res >= 1 ? jwtAuthResult : new JwtAuthResult();
 
         }
-        private List<Claim> GetClaims(User user)
+        private List<Claim> GetClaims(User user, List<string> roles)
         {
-            return new List<Claim>()
-            {
+            var claims =
+                new List<Claim>() {
                 new Claim(ClaimTypes.Name,user.UserName),
                 new Claim(ClaimTypes.NameIdentifier,user.UserName),
                 new Claim(ClaimTypes.Email,user.Email),
                 new Claim("PhoneNumber",user.PhoneNumber),
-                new Claim("Id",user.Id),
+                new Claim("Id",user.Id)};
 
-            };
+            foreach (var role in roles)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, role));
+            }
+            return claims;
+
         }
         private async Task<(JwtSecurityToken, string)> CreatToken(List<Claim> claims)
         {
@@ -153,9 +158,9 @@ namespace School.Application.Handlers.Authentication.Services
             var expirydate = userRefreshToken.ExpiryDate;
             return (userId, expirydate);
         }
-        public async Task<JwtAuthResult> GetRefreshToken(User user, JwtSecurityToken jwtToken, DateTime? expiryDate, string refreshToken)
+        public async Task<JwtAuthResult> GetRefreshToken(User user, JwtSecurityToken jwtToken, DateTime? expiryDate, string refreshToken, List<string> roles)
         {
-            var claims = GetClaims(user);
+            var claims = GetClaims(user, roles);
             var (JwtSecurity, accessToken) = await CreatToken(claims);
 
             var refreshTokenResult = new RefreshToken();

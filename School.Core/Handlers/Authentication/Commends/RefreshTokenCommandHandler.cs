@@ -57,7 +57,9 @@ namespace School.Application.Handlers.Authentication.Commends
 
                 }
 
-                var result = await authenticationServiceAction.GetRefreshToken(user, jwtTokenResult.Data, expiredDate, request.RefreshToken);
+                var roles = await userManager.GetRolesAsync(user);
+
+                var result = await authenticationServiceAction.GetRefreshToken(user, jwtTokenResult.Data, expiredDate, request.RefreshToken, roles.ToList());
 
                 return Result<JwtAuthResult>.Success(result);
             }
