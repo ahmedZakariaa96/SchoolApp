@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using School.Domain.Entities;
 using School.Domain.Entities.IdentityServer;
+using School.Domain.Entities.View;
 
 namespace School.Infrestructure.Persistence
 {
@@ -19,6 +20,14 @@ namespace School.Infrestructure.Persistence
 
 
         public virtual DbSet<StudentSubject> StudentSubjects { get; set; }
+
+
+        #region viws
+        public virtual DbSet<VW_Student> VW_Students { get; set; }
+
+        #endregion
+
+
 
         public ApplicationDbContext()
         {

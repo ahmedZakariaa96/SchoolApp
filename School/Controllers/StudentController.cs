@@ -5,6 +5,7 @@ using School.Application.Base.Wrapper;
 using School.Application.DTO;
 using School.Application.Handlers.StudentFeature.Commends;
 using School.Application.Handlers.StudentFeature.Queries;
+using School.Domain.Entities.View;
 
 namespace School.API.Controllers
 {
@@ -43,6 +44,14 @@ namespace School.API.Controllers
         public async Task<ActionResult<Result<string>>> DeleteStudent(int id)
         {
             return Single(await CommandAsync(new DeleteStudent(id)));
+        }
+        //----------------------------------------------------------
+
+        [HttpPost]
+        [Route("GetAllStudentVW")]
+        public async Task<ActionResult<Result<PaginatedResult<VW_Student>>>> GetAllStudentVW(GetAllStudentVW getAllStudentVW)
+        {
+            return Single(await QueryAsync(getAllStudentVW));
         }
     }
 }
