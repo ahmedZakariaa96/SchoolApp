@@ -4,6 +4,7 @@ using School.Application.Base.Shared;
 using School.Application.Base.Wrapper;
 using School.Application.DTO;
 using School.Application.Handlers.StudentFeature.Commends;
+using School.Application.Handlers.StudentFeature.DatabaseObjects;
 using School.Application.Handlers.StudentFeature.Queries;
 using School.Domain.Entities.View;
 
@@ -52,6 +53,13 @@ namespace School.API.Controllers
         public async Task<ActionResult<Result<PaginatedResult<VW_Student>>>> GetAllStudentVW(GetAllStudentVW getAllStudentVW)
         {
             return Single(await QueryAsync(getAllStudentVW));
+        }
+
+        [HttpPost]
+        [Route("GetStudentByIdPRC")]
+        public async Task<ActionResult<Result<VW_Student?>>> GetStudentByIdPRC(GetStudentByIdPRC getStudentByIdPRC)
+        {
+            return Single(await QueryAsync(getStudentByIdPRC));
         }
     }
 }

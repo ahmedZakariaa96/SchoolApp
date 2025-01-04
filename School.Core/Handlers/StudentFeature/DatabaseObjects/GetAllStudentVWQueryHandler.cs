@@ -5,7 +5,7 @@ using School.Application.Base.Wrapper;
 using School.Domain.Entities.View;
 using School.Infrestructure.Persistence.Repositories.Base.UnitOfWork;
 
-namespace School.Application.Handlers.StudentFeature.Queries
+namespace School.Application.Handlers.StudentFeature.DatabaseObjects
 {
     public class GetAllStudentVW : IRequest<Result<PaginatedResult<VW_Student>>>
     {
@@ -14,8 +14,8 @@ namespace School.Application.Handlers.StudentFeature.Queries
 
         public GetAllStudentVW(int pageNumber, int pageSize)
         {
-            this.PageNumber = pageNumber;
-            this.PageSize = pageSize;
+            PageNumber = pageNumber;
+            PageSize = pageSize;
         }
 
     }
@@ -33,7 +33,7 @@ namespace School.Application.Handlers.StudentFeature.Queries
         {
 
 
-            var studentData = await this.unitOfWork.Repository<VW_Student>().FindAll().ToPaginatedListAsync(request.PageNumber, request.PageSize);
+            var studentData = await unitOfWork.Repository<VW_Student>().FindAll().ToPaginatedListAsync(request.PageNumber, request.PageSize);
 
             return Result<PaginatedResult<VW_Student>>.Success(studentData);
 
