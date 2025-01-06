@@ -61,5 +61,12 @@ namespace School.API.Controllers
         {
             return Single(await QueryAsync(getStudentByIdPRC));
         }
+
+        [HttpPost]
+        [Route("GetStudentDataFNById")]
+        public async Task<ActionResult<Result<VW_Student?>>> GetStudentDataFNById(GetStudentDataFNById getStudentDataFNById)
+        {
+            return Single(await QueryAsync(getStudentDataFNById));
+        }
     }
 }

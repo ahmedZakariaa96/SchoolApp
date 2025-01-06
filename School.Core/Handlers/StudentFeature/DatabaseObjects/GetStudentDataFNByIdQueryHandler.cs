@@ -10,42 +10,41 @@ using System.Data;
 
 namespace School.Application.Handlers.StudentFeature.DatabaseObjects
 {
-    public class GetStudentByIdPRC : IRequest<Result<VW_Student?>>
+    public class GetStudentDataFNById : IRequest<Result<VW_Student?>>
     {
         public int StudId { get; set; }
     }
-    public class GetStudentByIdPRCQueryHandler : IRequestHandler<GetStudentByIdPRC, Result<VW_Student?>>
+    public class GetStudentDataFNByIdQueryHandler : IRequestHandler<GetStudentDataFNById, Result<VW_Student?>>
     {
         private readonly IUnitOfWork unitOfWork;
         private readonly IMapper mapper;
         private readonly ApplicationDbContext _applicationDbContext;
 
 
-        public GetStudentByIdPRCQueryHandler(IUnitOfWork unitOfWork, IMapper mapper, ApplicationDbContext applicationDbContext)
+        public GetStudentDataFNByIdQueryHandler(IUnitOfWork unitOfWork, IMapper mapper, ApplicationDbContext applicationDbContext)
         {
             this.unitOfWork = unitOfWork;
             this.mapper = mapper;
             this._applicationDbContext = applicationDbContext;
         }
-        public async Task<Result<VW_Student?>> Handle2(GetStudentByIdPRC request, CancellationToken cancellationToken)
+        public async Task<Result<VW_Student?>> Handle(GetStudentDataFNById request, CancellationToken cancellationToken)
         {
 
 
             IDbConnection applicationConnection = _applicationDbContext.Database.GetDbConnection();
             applicationConnection.Open();
-            var procedureName = "GetStudentDataPRC";
-            var procedureValues = new { StudId = request.StudId };
+            var functionName = "GetStudentDataFN";
+            var functionValues = new { StudId = request.StudId };
 
             using (var transaction = applicationConnection.BeginTransaction())
             {
                 try
                 {
                     var proceureData = (await applicationConnection.QueryAsync<VW_Student>(
-                       procedureName,
-                       procedureValues,
-                       transaction,
-                       null,
-                       CommandType.StoredProcedure
+                       $"SELECT * FROM {functionName}(@StudId)",
+                       functionValues,
+                       transaction
+
                    ));
 
 
@@ -64,14 +63,14 @@ namespace School.Application.Handlers.StudentFeature.DatabaseObjects
 
         }
 
-        public async Task<Result<VW_Student?>> Handle(GetStudentByIdPRC request, CancellationToken cancellationToken)
+        public async Task<Result<VW_Student?>> Handle2(GetStudentDataFNById request, CancellationToken cancellationToken)
         {
             try
             {
-                //Execute the stored procedure using EF Core
+                //Execute the  function using EF Core
 
                 var studentData = await _applicationDbContext.VW_Students
-                    .FromSqlInterpolated($"EXEC GetStudentDataPRC @StudId = {request.StudId}")
+                    .FromSqlInterpolated($"SELECT * FROM GetStudentDataFN ({request.StudId})")
                     .ToListAsync(cancellationToken);
 
 

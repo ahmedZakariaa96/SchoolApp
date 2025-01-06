@@ -10,6 +10,7 @@ namespace School.Infrestructure.Persistence.Migrations.View
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            //exec GetStudentDataPRC 1
             migrationBuilder.Sql(@"
 
                                 CREATE or alter PROCEDURE [dbo].[GetStudentDataPRC]
