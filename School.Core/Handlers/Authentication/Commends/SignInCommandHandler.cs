@@ -43,7 +43,7 @@ namespace School.Application.Handlers.Authentication.Commends
             {
                 return result;
             }
-
+            user = null;
             var signInResult = await this.signInManager.CheckPasswordSignInAsync(user, request.Password, false);
             if (!signInResult.Succeeded)
             {

@@ -12,6 +12,7 @@ using School.Domain.Entities.IdentityServer;
 using School.Infrestructure;
 using School.Infrestructure.Persistence;
 using School.Infrestructure.Persistence.Seed;
+using Serilog;
 using System.Globalization;
 using System.Text;
 var builder = WebApplication.CreateBuilder(args);
@@ -123,6 +124,12 @@ builder.Services.AddCors(options =>
 #endregion
 
 
+
+//Serilog
+Log.Logger = new LoggerConfiguration()
+              .ReadFrom.Configuration(builder.Configuration).CreateLogger();
+builder.Services.AddSerilog();
+
 //----------------------------------------------------------------------
 
 
@@ -130,6 +137,8 @@ var app = builder.Build();
 
 //Middleware
 app.UseMiddleware<ErrorHandlerMiddleware>();
+
+
 
 #region localozation2
 

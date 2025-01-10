@@ -35,6 +35,8 @@ namespace School.Application.Base.Middleware
                 }
 
                 var result = JsonSerializer.Serialize(responseModel);
+
+
                 await response.WriteAsync(result);
             }
         }

@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Logging;
+using Serilog;
 using System.Text;
 
 namespace School.Application.Base.Behaviours
@@ -30,6 +31,9 @@ namespace School.Application.Base.Behaviours
                 _logger.LogError(ex, "Request: Unhandled Exception for Request {Name} {@Request}", requestName, request);
                 //------------------------------------------------------------
                 //var response = new Exception(ex.Message);
+                Log.Error(ex, ex.Message, request, "");
+
+
                 throw;
             }
         }
@@ -40,7 +44,7 @@ namespace School.Application.Base.Behaviours
             if (!(ex is ThreadAbortException))
             {
                 string logFilePath = _IHostingEnvironment.ContentRootPath + "\\Log\\";
-                string filename = String.Format("ExceptionLog___{0:dd-MM-yyyy}.txt", DateTime.Now);
+                string filename = System.String.Format("ExceptionLog___{0:dd-MM-yyyy}.txt", DateTime.Now);
                 string filePath = Path.Combine(logFilePath, filename);
                 if (!Directory.Exists(logFilePath))
                     Directory.CreateDirectory(logFilePath);

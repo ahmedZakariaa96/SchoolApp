@@ -1,0 +1,72 @@
+ExceptionID : 055b4c48-eb25-408d-82fb-740245a5a7ef
+Date : 1/10/2025 6:08:56 PM
+Request : SignInCommandSchool.Application.Handlers.Authentication.Commends.SignInCommand
+----------------------------------------------------------------------------
+Exception
+Exception Message: Value cannot be null. (Parameter 'user')
+Source: Microsoft.AspNetCore.Identity
+
+
+######################################################################################################################################
+
+
+ExceptionID : 63b3c937-958b-4b30-88b3-ac178db4a8bb
+Date : 1/10/2025 6:12:17 PM
+Request : SignInCommandSchool.Application.Handlers.Authentication.Commends.SignInCommand
+----------------------------------------------------------------------------
+Exception
+Exception Message: Value cannot be null. (Parameter 'user')
+Source: Microsoft.AspNetCore.Identity
+
+
+######################################################################################################################################
+
+
+ExceptionID : 170d6d71-b2e4-480b-b1c3-bdf672a886e3
+Date : 1/10/2025 6:20:30 PM
+Request : SignInCommandSchool.Application.Handlers.Authentication.Commends.SignInCommand
+----------------------------------------------------------------------------
+Exception
+Exception Message: Value cannot be null. (Parameter 'user')
+Source: Microsoft.AspNetCore.Identity
+
+
+######################################################################################################################################
+
+
+ExceptionID : a8adf486-4b13-495d-aea5-abbd6fa0942d
+Date : 1/10/2025 6:25:39 PM
+Request : SignInCommandSchool.Application.Handlers.Authentication.Commends.SignInCommand
+----------------------------------------------------------------------------
+Exception
+Exception Message: Value cannot be null. (Parameter 'user')
+Source: Microsoft.AspNetCore.Identity
+
+
+######################################################################################################################################
+
+
+ExceptionID : a7107f19-1397-49dc-a393-4f9d95f2df1a
+Date : 1/10/2025 6:26:34 PM
+Request : SignInCommandSchool.Application.Handlers.Authentication.Commends.SignInCommand
+----------------------------------------------------------------------------
+Exception
+Exception Message: Value cannot be null. (Parameter 'user')
+Source: Microsoft.AspNetCore.Identity
+
+
+######################################################################################################################################
+
+
+ExceptionID : fc9e24e5-2a35-429b-8d47-b80a14a730b6
+Date : 1/10/2025 6:31:28 PM
+Request : SignInCommandSchool.Application.Handlers.Authentication.Commends.SignInCommand
+----------------------------------------------------------------------------
+Exception
+Exception Message: Value cannot be null. (Parameter 'user')
+Source: Microsoft.AspNetCore.Identity
+
+
+######################################################################################################################################
+
+
