@@ -1,0 +1,12 @@
+ExceptionID : 5ab45d71-a037-41df-ba51-3274036e2eb4
+Date : 1/17/2025 6:45:40 PM
+Request : SendEmailSchool.Application.Handlers.Email.Commends.SendEmail
+----------------------------------------------------------------------------
+Exception
+Exception Message: Object reference not set to an instance of an object.
+Source: School.Application
+
+
+######################################################################################################################################
+
+

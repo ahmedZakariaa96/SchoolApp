@@ -7,6 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using School.Application;
 using School.Application.Base.Middleware;
 using School.Application.Base.Shared.Authentication;
+using School.Application.Base.Shared.Email;
 using School.Domain.Entities;
 using School.Domain.Entities.IdentityServer;
 using School.Infrestructure;
@@ -51,6 +52,11 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 #region jwtSettings
 var jwtSettings = builder.Configuration.GetSection("jwtSettings").Get<JwtSettings>();
 builder.Services.AddSingleton(jwtSettings);
+#endregion
+
+#region emailSettings
+var emailSettings = builder.Configuration.GetSection("emailSettings").Get<EmailSettings>();
+builder.Services.AddSingleton(emailSettings);
 #endregion
 
 

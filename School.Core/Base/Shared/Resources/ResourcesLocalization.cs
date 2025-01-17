@@ -21,6 +21,11 @@
         public static string PasswordNotEqual = "PasswordNotEqual";
         //----------------------------------------------------------------
         public static string SignInMessages = "SignInMessages";
+        //----------------------------------------------------------------
+        public static string EmailSent = "EmailSent";
+        public static string EmailFailled = "EmailFailled";
+        //----------------------------------------------------------------
+
 
 
 

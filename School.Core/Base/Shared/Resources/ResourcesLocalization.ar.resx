@@ -123,6 +123,12 @@
   <data name="ChractersLenght" xml:space="preserve">
     <value>عدد الحروف يجب ان تكون اقل من او يساوي 10</value>
   </data>
+  <data name="EmailFailled" xml:space="preserve">
+    <value>فشل إرسال البريد الإلكتروني</value>
+  </data>
+  <data name="EmailSent" xml:space="preserve">
+    <value>تم إرسال البريد الإلكتروني بنجاح</value>
+  </data>
   <data name="Exist" xml:space="preserve">
     <value>الريكورد موجود موسبقأ</value>
   </data>

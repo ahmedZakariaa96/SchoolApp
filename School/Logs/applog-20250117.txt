@@ -1,0 +1,10 @@
+2025-01-17 18:45:40.653 +02:00 [ERR] Request: Unhandled Exception for Request SendEmail {"Email":"ahmedzakariaa96@gmail.com","Message":"hi ahmed ","Subject":"test email","$type":"SendEmail"}
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at School.Application.Handlers.Email.Commends.EmailsCommandHandler.Handle(SendEmail request, CancellationToken cancellationToken)
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+2025-01-17 18:45:40.761 +02:00 [ERR] Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at School.Application.Handlers.Email.Commends.EmailsCommandHandler.Handle(SendEmail request, CancellationToken cancellationToken)
+   at School.Application.Base.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at School.Application.Base.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)

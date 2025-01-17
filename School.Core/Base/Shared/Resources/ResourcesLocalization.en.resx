@@ -123,6 +123,12 @@
   <data name="ChractersLenght" xml:space="preserve">
     <value>Chracters Should less then or equal 10 Chracters</value>
   </data>
+  <data name="EmailFailled" xml:space="preserve">
+    <value>Email is failed to send</value>
+  </data>
+  <data name="EmailSent" xml:space="preserve">
+    <value>Email is sent successfully</value>
+  </data>
   <data name="Exist" xml:space="preserve">
     <value>Record Exist </value>
   </data>
